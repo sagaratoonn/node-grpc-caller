@@ -1,0 +1,17 @@
+{
+  "name": "node-grpc-caller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sagara Takahiro <vimyum@gmail.com> (https://qiita.com/vimyum)",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "node-grpc-caller": "node-grpc-caller.js"
+    }
+  }
+}

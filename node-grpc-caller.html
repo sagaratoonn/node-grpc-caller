@@ -1,0 +1,47 @@
+<script type="text/javascript">
+    RED.nodes.registerType('node-grpc-caller',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            server: {value:"0.0.0.0:19003"},
+            proto: {value:"/tmp/sample.proto"},
+            service: {value:"Service"},
+            rpc: {value:"rpc"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"node-grpc-caller";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="node-grpc-caller">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="icon-tag"></i> gRPC Server</label>
+        <input type="text" id="node-input-server">
+    </div>
+    <div class="form-row">
+        <label for="node-input-proto"><i class="icon-tag"></i> Protocol File</label>
+        <input type="text" id="node-input-proto">
+    </div>
+    <div class="form-row">
+        <label for="node-input-service"><i class="icon-tag"></i> Service</label>
+        <input type="text" id="node-input-service">
+    </div>
+    <div class="form-row">
+        <label for="node-input-rpc"><i class="icon-tag"></i> RPC</label>
+        <input type="text" id="node-input-rpc">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="node-grpc-caller">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
